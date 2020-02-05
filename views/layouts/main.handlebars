@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+    <header>
+        <title> {{headingInfo}} </title>
+    </header>
+
+    <nav class="flex-nav">
+        <div class="container">
+            <div class="grid">
+            <div class="column-xs-9 column-md-8">
+                <p id="logo">Airbnb<span id="highlight">.</span></p>
+            </div>
+            <div class="column-xs-3 column-md-4">
+                <a href="#" class="toggle-nav">Menu <i class="ion-navicon-round"></i></a>
+                <ul>
+                <li><a href="/home">About</a></li>
+                <li><a href="/listing">Search</a></li>
+                <li><a href="/registration">Sign Up</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {{{body}}}
+    </main>
+
+    <footer>
+
+    </footer>
+</body>
+</html>

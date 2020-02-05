@@ -1,0 +1,14 @@
+{{#each listings}}
+
+<article>
+    <img src="${{listings.image}}" alt="">
+        <div class="name">
+        <h3> ${{listings.name}} </h3> 
+        <p class="category"> ${{listings.category}}</p>
+        <p class="price"> $${{listings.price}}</p>
+        <p class="review"> ${{listings.reduce}} </p>
+        <p class="host"> ${{listings.host}} </p>
+    </div>
+</article>
+
+{{/each}}
