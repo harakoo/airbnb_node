@@ -133,6 +133,40 @@ app.get("/registration", (req,res) => {
     });
 })
 
+// //Registration Validation
+// app.post("/registration",(req,res) => {
+
+//     const errors= [];
+
+//   if(req.body.firstname=="")
+//   {
+//     errors.push("Sorry, you must enter a phone number");
+//   }
+
+//   if(req.body.lastname=="")
+//   {
+//     errors.push("Sorry, youmust enter a  message")
+//   }
+
+//   if(req.body.email=="")
+//   {
+//     errors.push("Sorry, youmust enter a  message")
+//   }
+
+//   if(req.body.psw=="")
+//   {
+//     errors.push("Sorry, youmust enter a  message")
+//   }
+
+//   if(errors.length > 0)
+//   {
+//     res.render("myForm",{
+//       messages : errors
+//     })
+//   }
+
+// });
+
 //Create a Web server
 const PORT = 3000;
 app.listen(PORT,() => {

@@ -97,3 +97,21 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
     $(target).fadeIn(600);
     
   });
+
+  //Registration form validation
+
+  function validationFrom () {
+    var input = document.forms [`firstname`].value;
+    if (input == "") {
+      return document.getElementById('error_msg').innerHTML = 'Sorry, youmust enter a  message' ;
+    }
+  }
+
+  // Registration form pop up
+  function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
