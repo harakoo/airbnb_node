@@ -1,14 +1,14 @@
 {{#each listings}}
 
-<article>
-    <img src="{{this.image}}" alt="">
-        <div class="name">
-        <h3> {{this.name}} </h3> 
+<div class="wrapper">
+    <div class="item">
+        <img src="{{this.image}}" alt="rental place image">
+        <h3 class="rental_name"> {{this.name}} </h3> 
         <p class="category"> {{this.category}}</p>
-        <p class="price"> {{this.price}}</p>
-        <p class="review"> {{this.review}} </p>
-        <p class="host"> {{this.host}} </p>
+        <p class="price"> ${{this.price}} CAD/night</p>
+        <p class="review"> ⭐️{{this.review}} </p>
+        <p class="host"> {{this.host}} host</p>
     </div>
-</article>
+</div>
 
 {{/each}}
