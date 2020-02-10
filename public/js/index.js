@@ -82,21 +82,6 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
       }
   
   });
-  
-  $('.tab a').on('click', function (e) {
-    
-    e.preventDefault();
-    
-    $(this).parent().addClass('active');
-    $(this).parent().siblings().removeClass('active');
-    
-    target = $(this).attr('href');
-  
-    $('.tab-content > div').not(target).hide();
-    
-    $(target).fadeIn(600);
-    
-  });
 
   //Registration form validation
 
@@ -107,11 +92,3 @@ $('.form').find('input, textarea').on('keyup blur focus', function (e) {
     }
   }
 
-  // Registration form pop up
-  function openForm() {
-    document.getElementById("myForm").style.display = "block";
-  }
-  
-  function closeForm() {
-    document.getElementById("myForm").style.display = "none";
-  }

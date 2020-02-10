@@ -133,6 +133,15 @@ app.get("/registration", (req,res) => {
     });
 })
 
+app.get("/login", (req,res) => {
+    
+    res.render("login", {
+        title:"Log In",
+        headingInfo: "Log In Page",
+        dynamicContent: "something"
+    });
+})
+
 // //Registration Validation
 // app.post("/registration",(req,res) => {
 

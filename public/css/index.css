@@ -10,7 +10,7 @@
  body {
 	 font-family: 'Barlow', sans-serif;
 	 font-size: 1rem;
-	 color: #181818;
+	 color: #222222;
 	 background: #fff;
 }
 
@@ -19,7 +19,7 @@ a {
 	 text-decoration: none;
 }
  a:hover {
-	 color: #232323;
+	 color: #FF5A5F;
 }
  
 h1, h2 {
@@ -48,7 +48,7 @@ nav ul li {
 }
 
 .logo {
-	color: #000000;
+	color: #222222;
 	font-weight: 700;
 	font-size: 2rem;
 	float: left;
@@ -60,7 +60,7 @@ nav ul li {
 /* Promotion section */
 .promo-section {
 	padding: 0;
-	margin: 2em 1em;
+	margin: 1em 1em;
 }
 
 img {
@@ -89,7 +89,7 @@ img {
 	color: #FF5A5F;
 }
 .intro .title .underline {
-	color: #232323;
+	color: #222222;
 }
 .description {
 	position: relative;
@@ -131,26 +131,25 @@ img {
 	justify-content: flex-end;
 }
 .controls .previous {
-	border: 1px solid #232323;
+	border: 1px solid #222222;
 }
 .controls .previous:hover i {
 	transform: scale(1.5);
 }
 .controls .next {
-	border-top: 1px solid #232323;
-	border-right: 1px solid #232323;
-	border-bottom: 1px solid #232323;
+	padding: 1em 0;
+	border-top: 1px solid #222222;
+	border-right: 1px solid #222222;
+	border-bottom: 1px solid #222222;
 }
-.controls .next:hover i {
-	transform: scale(1.5);
-}
+
 .previous, .next {
 	display: flex;
 	align-content: center;
 	justify-content: center;
 	flex-basis: 15%;
 	font-size: 1rem;
-	color: #232323;
+	color: #222222;
 }
 .previous i, .next i {
 	transition: all 0.1s ease;
@@ -198,140 +197,161 @@ img {
 /* Search form */
 .search_bg {
 	background-image: url(https://images.unsplash.com/photo-1506765515384-028b60a970df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1498&q=80);
-	height: 70vh;
+	height: 90vh;
 	position: relative;
 }
 
 .search {
 	display: block;
 	width: 70%;
-	background-color: white;
+	background-color: #222222a1;
 	padding: 1.5em 3em;
 	margin: 3em auto;
 	border-radius: 1em;
-	font-size: 1em;
+	color: white;
 }
 
 .search_title {
 	size: 3em;
 }
 
+.search input {
+	margin-top: 1em;
+}
+
 /* Registration */
 
+.form {
+	width: 50%;
+	margin: 1em auto;
+	border-radius: 4px;
+}
 .tab-group {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 40px 0;
+	list-style: none;
+	margin: 0 0 1em 0;
 }
 .tab-group:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 .tab-group li a {
-    display: block;
-    text-decoration: none;
-    padding: 15px;
-    float: left;
-    width: 50%;
-    text-align: center;
-    cursor: pointer;
-    transition: 0.5s ease;
+	display: block;
+	text-decoration: none;
+	background: rgba(34, 34, 34, .25);
+	color: #222;
+	font-size: 1em;
+	float: left;
+	width: 50%;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.5s ease;
+	padding: 1em;
 }
 .tab-group li a:hover {
-    background: #FF5A5F;
-    color: #fff;
+	background: #ff5a5f;
+	color: #222;
 }
 .tab-group .active a {
-    background: #FF5A5F;
-    color: #fff;
+	background: #ff5a5f;
+	color: #222;
 }
 .tab-content > div:last-child {
-    display: none;
+	display: none;
 }
-
+.form_title {
+	text-align: center;
+	color: #222;
+	font-weight: 300;
+	margin: 0 0 2em;
+}
 label {
-    transform: translateY(6px);
-    color: black;
-    transition: all 0.25s ease;
-    -webkit-backface-visibility: hidden;
-    pointer-events: none;
+	position: absolute;
+	transform: translateY(6px);
+	left: 13px;
+	color: rgba(34, 34, 34, .5);
+	transition: all 0.25s ease;
+	-webkit-backface-visibility: hidden;
+	pointer-events: none;
+	font-size: 1em;
 }
 label .req {
-    margin: 2px;
-    color: #FF5A5F;
+	margin: 2px;
+	color: #ff5a5f;
 }
 label.active {
-    transform: translateY(50px);
-    left: 2px;
+	transform: translateY(50px);
+	left: 2px;
+	font-size: 1em;
 }
 label.active .req {
-    opacity: 0;
+	opacity: 0;
 }
 label.highlight {
-    color: #fff;
+	color: #222;
 }
 input, textarea {
-    display: block;
-    width: 100%;
-    height: 100%;
-    padding: 5px 10px;
-    background: none;
-    background-image: none;
-    border: 1px solid gray;
-    color: black;
-    border-radius: 0;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+	font-size: 1em;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 5px 10px;
+	background: none;
+	background-image: none;
+	border: 1px solid #222;
+	color: #222;
+	border-radius: 0;
+	transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 input:focus, textarea:focus {
-    outline: 0;
-    border-color: #FF5A5F;
+	outline: 0;
+	border-color: #ff5a5f;
 }
 textarea {
-    border: 2px solid black;
-    resize: vertical;
+	border: 2px solid #222;
+	resize: vertical;
 }
 .field-wrap {
-    position: relative;
-    margin-bottom: 40px;
+	position: relative;
+	margin-bottom: 40px;
 }
 .top-row:after {
-    content: "";
-    display: table;
-    clear: both;
+	content: "";
+	display: table;
+	clear: both;
 }
 .top-row > div {
-    float: left;
-    width: 48%;
-    margin-right: 4%;
+	float: left;
+	width: 48%;
+	margin-right: 4%;
 }
 .top-row > div:last-child {
-    margin: 0;
+	margin: 0;
 }
 .button {
-    border: 0;
-    outline: none;
-    border-radius: 0;
-    padding: 15px 0;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    background: #FF5A5F;
-    color: #fff;
-    transition: all 0.5s ease;
-    -webkit-appearance: none;
+	border: 0;
+	outline: none;
+	border-radius: 0;
+	padding: 15px 0;
+	font-size: 2rem;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	background: #ff5a5f;
+	color: #222;
+	transition: all 0.5s ease;
+	-webkit-appearance: none;
 }
 .button:hover, .button:focus {
-    background: #FF5A5F;
+	background: #ff5a5f;
 }
 .button-block {
-    display: block;
-	width: 50%;
-	margin: 0 auto;
+	display: block;
+	width: 100%;
 }
 .forgot {
-    margin-top: -20px;
-    text-align: right;
+	margin-top: -20px;
+	text-align: right;
 }
 
 /* Informational Section */
@@ -376,7 +396,7 @@ cite img {
 
 /* Footer */
 footer {
-	background-color: #252625;
+	background-color: #222222;
 	color: white;
 	line-height: 1.5;
   }
@@ -394,7 +414,7 @@ footer {
   }
   
   .ft-title {
-	color: #fff;
+	color: #00A699;
 	font-family: "Courgette", serif;
 	font-size: 1.375rem;
 	padding-bottom: 0.625rem;
@@ -471,11 +491,11 @@ footer {
   .ft-legal {
 	  padding: 0.9375rem 1.875rem;
 	  background-color: #f7f7f7;
-	color: black;
+	color: #222222;
   }
   
   .ft-legal a {
-	color: black;
+	color: #222222;
   }
   
   .ft-legal-list {
@@ -500,5 +520,5 @@ footer {
 }
 
 .rental_name {
-	color: black; 
+	color: #222222; 
 }
