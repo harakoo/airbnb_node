@@ -104,10 +104,10 @@ img {
 .slider-item.active {
 	display: block;
 }
-.slider-item.active .hide-mobile {
+.slider-item.active {
 	display: none;
 }
-.slider-item.active .show-mobile {
+.slider-item.active {
 	display: block;
 }
 
