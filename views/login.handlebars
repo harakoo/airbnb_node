@@ -1,7 +1,3 @@
-{{#each message}}
-  <div class="errors">{{this}}</div>
-{{/each}}
-
 <div class="form">
       
       <ul class="tab-group">
@@ -18,14 +14,14 @@
             <label>
               Email Address<span class="req">*</span>
             </label>
-            <input type="text" name="email">
+            <input type="text" name="loginEmail">
           </div>
           
           <div class="field-wrap">
             <label>
               Password<span class="req">*</span>
             </label>
-            <input type="password" name="password">
+            <input type="password" name="loginPassword">
           </div>
           
           <p class="forgot"><a href="#">Forgot Password?</a></p>
@@ -33,7 +29,9 @@
           <input type="submit" value="Log In">
           
           </form>
-
+        {{#each message}}
+          <div class="errors">{{this}}</div>
+        {{/each}}
         </div>
         
       </div><!-- tab-content -->

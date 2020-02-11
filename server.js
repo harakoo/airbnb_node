@@ -208,17 +208,17 @@ app.post("/registration",(req,res)=>{
 
 app.post("/login",(req,res)=>{
 const errors= [];
-  if(req.body.email== "")
+  if(req.body.loginEmail== "")
   {
-    errors.push ("You must fill in all of the fields");
+    errors.push ("You must enter email address");
   }
-  if(req.body.password== "")
+  if(req.body.loginPassword== "")
   {
-    errors.push ("You must fill in all of the fields");
+    errors.push ("You must enter password");
   }
   if(errors.length > 0)
   {
-    res.render("form",{
+    res.render("login",{
         message : errors
       })
   }
