@@ -52,43 +52,14 @@ previousItem.addEventListener('click', showPreviousItem);
 document.addEventListener('keydown', keyPress);
 navItem.addEventListener('click', toggleNavigation);
 
+//Registration form validation
 
-// Sign up/ Sign in
-$('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
-    var $this = $(this),
-        label = $this.prev('label');
-  
-        if (e.type === 'keyup') {
-              if ($this.val() === '') {
-            label.removeClass('active highlight');
-          } else {
-            label.addClass('active highlight');
-          }
-      } else if (e.type === 'blur') {
-          if( $this.val() === '' ) {
-              label.removeClass('active highlight'); 
-              } else {
-              label.removeClass('highlight');   
-              }   
-      } else if (e.type === 'focus') {
-        
-        if( $this.val() === '' ) {
-              label.removeClass('highlight'); 
-              } 
-        else if( $this.val() !== '' ) {
-              label.addClass('highlight');
-              }
-      }
-  
-  });
-
-  //Registration form validation
-
-  function validationFrom () {
-    var input = document.forms [`firstname`].value;
-    if (input == "") {
-      return document.getElementById('error_msg').innerHTML = 'Sorry, youmust enter a  message' ;
-    }
-  }
+// function validationForm () {
+//   var input = document.forms ["myForm"] ["firstname"].value;
+//   if (input == "") {
+//     alert("Name must be filled out");
+//     return false;
+//     // return document.getElementById('error_msg').innerHTML = 'Sorry, youmust enter a  message' ;
+//   }
+// }
 

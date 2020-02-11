@@ -3,6 +3,7 @@ const express = require("express");
 
 //Import express-handlebars package
 const exphbs = require('express-handlebars');
+const bodyParser = require('body-parser');    
 
 //create express app object
 const app = express();
@@ -14,6 +15,8 @@ app.set('view engine', 'handlebars');
 //Link static assests
 app.use(express.static('public'));
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
 
 const listings = [
     { //0
@@ -175,6 +178,51 @@ app.get("/login", (req,res) => {
 //   }
 
 // });
+
+app.post("/registration",(req,res)=>{
+    const errors= [];
+  if(req.body.firstname== "")
+  {
+    console.log('has error')
+    errors.push = "You must fill in all of the fields";
+  }
+  if(req.body.lastname== "")
+  {
+    errors.push = "You must fill in all of the fields";
+  }
+  if(req.body.email== "")
+  {
+    errors.push = "You must fill in all of the fields";
+  }
+  if(req.body.password== "")
+  {
+    errors.push = "You must fill in all of the fields";
+  }
+  if(errors.length > 0)
+  {
+    res.render("registration",{
+        messages : errors
+    })
+  }
+});
+
+app.post("/login",(req,res)=>{
+    const errors= [];
+  if(req.body.email== "")
+  {
+    errors.push = "You must fill in all of the fields";
+  }
+  if(req.body.password== "")
+  {
+    errors.push = "You must fill in all of the fields";
+  }
+  if(errors.length > 0)
+  {
+    res.render("registration",{
+        messages : errors
+    })
+  }
+});
 
 //Create a Web server
 const PORT = 3000;
