@@ -184,19 +184,19 @@ app.post("/registration",(req,res)=>{
   if(req.body.firstname== "")
   {
     console.log('has error')
-    errors.push = "You must fill in all of the fields";
+    errors.push ("Sorry, you must enter first name");
   }
   if(req.body.lastname== "")
   {
-    errors.push = "You must fill in all of the fields";
+    errors.push ("Sorry, you must enter last name");
   }
   if(req.body.email== "")
   {
-    errors.push = "You must fill in all of the fields";
+    errors.push ("Sorry, you must enter email");
   }
   if(req.body.password== "")
   {
-    errors.push = "You must fill in all of the fields";
+    errors.push ("Sorry, you must enter password");
   }
   if(errors.length > 0)
   {
@@ -207,20 +207,20 @@ app.post("/registration",(req,res)=>{
 });
 
 app.post("/login",(req,res)=>{
-    const errors= [];
+const errors= [];
   if(req.body.email== "")
   {
-    errors.push = "You must fill in all of the fields";
+    errors.push ("You must fill in all of the fields");
   }
   if(req.body.password== "")
   {
-    errors.push = "You must fill in all of the fields";
+    errors.push ("You must fill in all of the fields");
   }
   if(errors.length > 0)
   {
-    res.render("registration",{
-        messages : errors
-    })
+    res.render("form",{
+        message : errors
+      })
   }
 });
 

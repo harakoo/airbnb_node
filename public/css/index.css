@@ -574,3 +574,9 @@ footer {
     background-color: white;
     color: #FF5A5F;
 }
+
+.errors {
+	font-style: 2em;
+	color: #FF5A5F;
+	text-align: center;
+}
