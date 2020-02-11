@@ -50,7 +50,7 @@ const listings = [
         host: `plus`
     }, { //4
         id:105,
-        name: `Spacious Room 1`,
+        name: `Spacious Room near Downtown`,
         image: `https://odis.homeaway.com/odis/listing/7f65eb6a-0adb-4810-ae7d-8671f7f5ad2f.f10.jpg`,
         category: `Private room`,
         price: 75,

@@ -204,11 +204,11 @@ img {
 .search {
 	display: block;
 	width: 70%;
-	background-color: #222222a1;
+	background-color: #ffffff98;
 	padding: 1.5em 3em;
 	margin: 3em auto;
 	border-radius: 1em;
-	color: white;
+	color: #222222;
 }
 
 .search_title {
@@ -228,8 +228,15 @@ img {
 }
 .tab-group {
 	list-style: none;
-	margin: 0 0 1em 0;
+	margin: 0;
 }
+
+h3 {
+	color: #222222;
+	text-align: center;
+	margin: 1em 0;
+}
+
 .tab-group:after {
 	content: "";
 	display: table;
@@ -250,11 +257,11 @@ img {
 }
 .tab-group li a:hover {
 	background: #ff5a5f;
-	color: #222;
+	color: white;
 }
 .tab-group .active a {
 	background: #ff5a5f;
-	color: #222;
+	color: white;
 }
 .tab-content > div:last-child {
 	display: none;
@@ -263,7 +270,6 @@ img {
 	text-align: center;
 	color: #222;
 	font-weight: 300;
-	margin: 0 0 2em;
 }
 label {
 	position: absolute;
@@ -276,7 +282,6 @@ label {
 	font-size: 1em;
 }
 label .req {
-	margin: 2px;
 	color: #ff5a5f;
 }
 label.active {
@@ -333,12 +338,12 @@ textarea {
 	outline: none;
 	border-radius: 0;
 	padding: 15px 0;
-	font-size: 2rem;
+	font-size: 1em;
 	font-weight: 600;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 	background: #ff5a5f;
-	color: #222;
+	color: white;
 	transition: all 0.5s ease;
 	-webkit-appearance: none;
 }
@@ -350,8 +355,11 @@ textarea {
 	width: 100%;
 }
 .forgot {
-	margin-top: -20px;
+	margin-top: -1em;
 	text-align: right;
+	margin-bottom: 1em;
+	font-size: 0.7em;
+	text-decoration: underline;
 }
 
 /* Informational Section */
@@ -414,7 +422,7 @@ footer {
   }
   
   .ft-title {
-	color: #00A699;
+	color: #ff5a5f;
 	font-family: "Courgette", serif;
 	font-size: 1.375rem;
 	padding-bottom: 0.625rem;
@@ -513,6 +521,10 @@ footer {
   }
 
 /* listing grid */
+.listings {
+	margin: 1em 1em;
+}
+
 .wrapper {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
@@ -521,4 +533,44 @@ footer {
 
 .rental_name {
 	color: #222222; 
+	text-align: left;
+}
+
+.rental_img {
+	border-radius: 0.25em;
+}
+
+/* listing search */
+.listing_search {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1em;
+	margin: 2em auto;
+}
+
+.btn {
+    height: 3em;
+    border: 1px #FF5A5F solid;
+    border-radius: 0.25em;
+    overflow: hidden;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+	font-size: 0.8em;
+    color: #333333;
+    transition: all 0.9s, color 0.3;
+}
+
+.btn:hover {
+    color: #FF5A5F;
+}
+
+.search-box {
+    background-color: #FF5A5F;
+    color: white;
+}
+
+.search-box:hover {
+    background-color: white;
+    color: #FF5A5F;
 }
