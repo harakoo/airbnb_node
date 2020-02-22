@@ -5,6 +5,9 @@ const express = require("express");
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');    
 
+// Import Fake DB
+const listingModel = require("./models/listings");
+
 //create express app object
 const app = express();
 
@@ -18,6 +21,7 @@ app.use(express.static('public'));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
+// Data
 const listings = [
     { //0
         id:101,
@@ -145,40 +149,6 @@ app.get("/login", (req,res) => {
     });
 })
 
-// //Registration Validation
-// app.post("/registration",(req,res) => {
-
-//     const errors= [];
-
-//   if(req.body.firstname=="")
-//   {
-//     errors.push("Sorry, you must enter a phone number");
-//   }
-
-//   if(req.body.lastname=="")
-//   {
-//     errors.push("Sorry, youmust enter a  message")
-//   }
-
-//   if(req.body.email=="")
-//   {
-//     errors.push("Sorry, youmust enter a  message")
-//   }
-
-//   if(req.body.psw=="")
-//   {
-//     errors.push("Sorry, youmust enter a  message")
-//   }
-
-//   if(errors.length > 0)
-//   {
-//     res.render("myForm",{
-//       messages : errors
-//     })
-//   }
-
-// });
-
 app.post("/registration",(req,res)=>{
     const errors= [];
   if(req.body.firstname== "")
@@ -224,8 +194,21 @@ const errors= [];
   }
 });
 
+app.get("/featuredRooms", (req,res) => {
+    
+  res.render("featuredrooms", {
+      title:"Featured Rooms",
+      headingInfo: "Feature Room Page",
+      listings: listingModel.getallListings()
+  });
+})
+
+app.post("/featuredRooms", (req,res) => {
+    
+})
+
 //Create a Web server
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT,() => {
     console.log(`Web server is connected.`);
 })
