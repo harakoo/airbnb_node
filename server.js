@@ -118,7 +118,8 @@ app.get("/", (req,res) => {
     res.render("home", {
         title:"Home",
         headingInfo: "Home page",
-        dynamicContent: "something"
+        dynamicContent: "something",
+        listings: listingModel.getallListings()
     });
 })
 
@@ -194,18 +195,15 @@ const errors= [];
   }
 });
 
-app.get("/featuredRooms", (req,res) => {
+app.get("/", (req,res) => {
     
-  res.render("featuredrooms", {
-      title:"Featured Rooms",
-      headingInfo: "Feature Room Page",
-      listings: listingModel.getallListings()
+  res.render("about", {
+      title:"About",
+      headingInfo: "About",
+      dynamicContent: "something"
   });
 })
 
-app.post("/featuredRooms", (req,res) => {
-    
-})
 
 //Create a Web server
 const PORT = process.env.PORT || 3000;
