@@ -580,3 +580,12 @@ footer {
 	color: #FF5A5F;
 	text-align: center;
 }
+
+@media only screen and (max-width: 70em) {
+	.wrapper {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 1em;
+		margin: 2em auto;
+	}
+}
