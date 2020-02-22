@@ -29,18 +29,17 @@
 </section>
 
 {{!-- Featured listing --}}
+<h1>Featured Airbnb Plus destinations</h1>
 {{#each listings}}
 
     <div>
-        <p>
-              Title:  {{this.title}}
-        </p>
-        <p>
-                Description : {{this.description}}
-        </p>
-        <p>
-                Price : {{this.price}}
-        </p>
+      image:  <img src="{{this.image}}" alt="featured room images" class="">
+      <p>
+        title : {{this.title}}
+      </p>
+      <p>
+        Price : {{this.price}}
+      </p>
 
     </div>
 

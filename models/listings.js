@@ -6,19 +6,13 @@ const listing =
     init()
     {
 
-        this.fakeDB.push({title:'XPS 13',description:`Our smallest 13-inch laptops feature a virtually 
-        borderless InfinityEdge display and up to 10th gen Intel® processors. 
-        Touch, silver, rose gold and frost options available
-        `,price:`1349.99`});
+        this.fakeDB.push({image:'/img/Lakeview City.png',title:`Lakeview City Condo`,price:`200`});
     
-        this.fakeDB.push({title:'XPS 15',description:`Powerhouse performance with the latest processors and NVIDIA 
-        graphics paired with a stunning 4K Ultra HD display.`,price:`1749.99`});
+        this.fakeDB.push({image:'/img/Condominium Close to CN Tower.png',title:`Bright Welcoming Condominium Close to CN Tower`,price:`250`});
     
-        this. fakeDB.push({title:'XPS 17',description:`XPS 17 is designed to keep you entertained for more than 9 hours 
-        with a 9-cell battery upgrade.`,price:`1949.99`});
+        this. fakeDB.push({image:'/img/Vintage Style Apartment in Historic Annex.png',title:`Vintage Style Apartment in Historic Annex`,price:`300`});
 
-
-        this. fakeDB.push({title:'toy',description:`nice toy.everyone loves toys`,price:`149.99`});
+        this. fakeDB.push({image:'/img/Rooftop.png',title:`Breathtaking 360° City Views from the Rooftop `,price:`270`});
     },
     getallListings()
     {
