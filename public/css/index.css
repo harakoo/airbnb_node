@@ -98,6 +98,12 @@ img {
 	opacity: 0;
 	animation: fadeIn 0.8s 0.6s ease forwards;
 }
+
+.slider {
+	margin: 0;
+	padding: 0;
+}
+
 .slider-item {
 	display: none;
 }
