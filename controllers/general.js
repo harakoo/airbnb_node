@@ -79,7 +79,7 @@ router.post("/registration",(req,res)=>{
     })
   };
 
-  const {firstName,lastName,email,phone} = req.body;
+  const {firstname,lastname,email,phone} = req.body;
   
   const accountSid = 'AC1d8c8e1b23c5759a4f363c8b28b380dd';
   const authToken = 'ace4562a20527535cecea159508cb4a7';
