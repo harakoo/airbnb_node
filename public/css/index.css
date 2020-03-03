@@ -660,6 +660,34 @@ footer {
 	letter-spacing: 0.1em;
   }
 
+  /* User Dashboard */
+  .user-info {
+    width: 100%;
+    background-color: #FF5A5F;
+}
+
+.user-info a {
+    padding: 0.375em 0.5em 0.375em 0.5em;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    display: block;
+}
+
+.user-info a:hover {
+    color: black;
+}
+
+.menu-text li{
+    list-style: none;
+    text-align: center;
+}
+
+.thankyou {
+	width: 100%;
+	height: 100%;
+}
+
   /* Media query */
   @media only screen and (max-width: 70em) {
 	.wrapper {
@@ -675,3 +703,4 @@ footer {
 		margin: 2em 0;
 	  }
 }
+

@@ -26,6 +26,15 @@ router.get("/listing", (req,res) => {
     });
 })
 
+router.get("/dashboard", (req,res) => {
+    
+  res.render("dashboard", {
+      title:"User Dashboard",
+      headingInfo: "User Information Page",
+      dynamicContent: "something"
+  });
+})
+
 router.get("/registration", (req,res) => {
     
     res.render("registration", {
@@ -78,7 +87,7 @@ router.post("/registration",(req,res)=>{
 
   client.messages
     .create({
-      body: 'This is the ship that made the Kessel Run in fourteen parsecs?',
+      body: 'Welcome to AirBnb!',
       from: '+12017013064',
       to: `${phone}`
     })
