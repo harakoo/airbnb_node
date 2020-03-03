@@ -100,7 +100,7 @@ router.post("/registration",(req,res)=>{
     from: `${email}`,
     subject: 'Welcome to AirBnb',
     html: 
-    `Hello ${firstName} ${lastName} <br>
+    `Hello ${firstname} ${lastname} <br>
      Below is your registration information <br>
      Users's Email Address ${email} <br>
      Users's Phone number : ${phone}<br>
