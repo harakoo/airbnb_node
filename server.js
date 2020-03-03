@@ -20,12 +20,9 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 // Load controllers
 const generalController = require("./controllers/general");
-const productController = require("./controllers/product");
 
 //map each controller to the app object
-
 app.use("/",generalController);
-app.use("/product",productController);
 
 const htmlTemplate = section => `
 <!DOCTYPE html>
@@ -43,28 +40,6 @@ const htmlTemplate = section => `
 </body>
 </html>
 `
-
-/*
-const getListingsAsUl = () => {
-    let ulString = '';
-    listings.forEach(prob => {
-        ulString += `
-                    <article>
-                    <img src="${listings.image}" alt="">
-                    <div class="name">
-                    <h3> ${listings.name} </h3> 
-                    <p class="category"> ${listings.category}</p>
-                    <p class="price"> $${listings.price}</p>
-                    <p class="review"> ${listings.reduce} </p>
-                    <p class="host"> ${listings.host} </p>
-                    </div>
-                    </article>
-                    `
-    })
-}
-*/
-
-
 
 //Create a Web server
 const PORT = process.env.PORT || 3000;

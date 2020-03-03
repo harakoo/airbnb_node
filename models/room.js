@@ -24,7 +24,7 @@ const room =
             review: 4,
             host: `general`});
     
-        this. fakeDB.push({
+        this.fakeDB.push({
             id:103,
             name: `Master bedroom with ensuite bathroom & parking`,
             image: `https://odis.homeaway.com/odis/listing/060df9ea-5baa-4e52-9e4b-9982304b97ee.f10.jpg`,
@@ -34,7 +34,7 @@ const room =
             host: `general`
         });
 
-        this. fakeDB.push({
+        this.fakeDB.push({
             id:104,
             name: `A cozy home minutes walk from Eaton Centre`,
             image: `https://odis.homeaway.com/odis/listing/5a837c15-7891-4909-aab4-662ce7b45351.f10.jpg`,
@@ -44,7 +44,7 @@ const room =
             host: `plus`
         });
 
-        this. fakeDB.push({
+        this.fakeDB.push({
             id:105,
             name: `Spacious Room near Downtown`,
             image: `https://odis.homeaway.com/odis/listing/7f65eb6a-0adb-4810-ae7d-8671f7f5ad2f.f10.jpg`,
@@ -54,7 +54,7 @@ const room =
             host: `plus`
         });
 
-        this. fakeDB.push({
+        this.fakeDB.push({
             id:106,
             name: `Walk to the EX and Entertainment District`,
             image: `https://odis.homeaway.com/odis/listing/25343abb-46c3-4d04-8135-8c49201c1125.f10.jpg`,
@@ -72,4 +72,5 @@ const room =
 
 }
 
+room.init();
 module.exports=room;
