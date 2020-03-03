@@ -3,7 +3,10 @@ const express = require("express");
 
 //Import express-handlebars package
 const exphbs = require('express-handlebars');
-const bodyParser = require('body-parser');    
+const bodyParser = require('body-parser');   
+
+// Environment variable file
+require('dotenv').config({path:"./config/keys.env"}) 
 
 //create express app object
 const app = express();

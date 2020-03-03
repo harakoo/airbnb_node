@@ -94,7 +94,7 @@ router.post("/registration",(req,res)=>{
     .then(message => console.log(message.sid));
 
     const sgMail = require('@sendgrid/mail');
-    sgMail.setApiKey("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");
+    sgMail.setApiKey("");
     const msg = {
     to: `haileykwon8@gmail.com`,
     from: `${email}`,
