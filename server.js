@@ -21,6 +21,14 @@ app.use(express.static('public'));
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
 
+// Mongo DB
+const mongoose = require('mongoose');
+mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology: true})
+.then(()=> {
+  console.log(`Connected to MongoDB Database`)
+})
+.catch(err=>console.log(`Error occured when connecting to databse ${err}`));
+
 // Load controllers
 const generalController = require("./controllers/general");
 
@@ -28,7 +36,7 @@ const generalController = require("./controllers/general");
 app.use("/",generalController);
 
 const htmlTemplate = section => `
-<!DOCTYPE html>
+<!DOCTYPE html>ß
 <html lang="en">
 <head>
   <meta charset="UTF-8">
