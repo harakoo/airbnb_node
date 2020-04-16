@@ -5,6 +5,9 @@ const express = require("express");
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');   
 
+// MongoDB
+const mongoose = require('mongoose');
+
 // Environment variable file
 require('dotenv').config({path:"./config/keys.env"}) 
 
@@ -22,12 +25,11 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // Mongo DB
-const mongoose = require('mongoose');
 mongoose.connect(process.env.MONGO_DB_CONNECTION_STRING, {useNewUrlParser: true, useUnifiedTopology: true})
-.then(()=> {
-  console.log(`Connected to MongoDB Database`)
+.then(()=>{
+    console.log(`Connected to MongoDB Database`);
 })
-.catch(err=>console.log(`Error occured when connecting to databse ${err}`));
+.catch(err=>console.log(`Error occured when connecting to database ${err}`));
 
 // Load controllers
 const generalController = require("./controllers/general");
