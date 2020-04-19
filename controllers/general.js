@@ -81,8 +81,8 @@ router.post("/registration",(req,res)=>{
 
   const {firstname,lastname,email,phone} = req.body;
   
-  const accountSid = 'AC1d8c8e1b23c5759a4f363c8b28b380dd';
-  const authToken = 'ace4562a20527535cecea159508cb4a7';
+  const accountSid = `${process.env.accountSid}`;
+  const authToken = `${process.env.authToken}`;
   const client = require('twilio')(accountSid, authToken);
 
   client.messages
@@ -143,5 +143,13 @@ router.get("/", (req,res) => {
       dynamicContent: "something"
   });
 })
+
+router.get("/profile/",(req,res)=>{
+
+
+  res.render("rooms/roomDashboard");
+  
+})
+
 
 module.exports=router;
